@@ -21,11 +21,11 @@ const People = () => {
 
 
         <div className={`flexCenter ${css.heading}`}>
-          <span className="primaryText">People talk about us</span>
+          <span className="primaryText">My Projects</span>
           <p style={{ marginTop: "2rem" }}>
-            I got a job that was in accordance with the salary and field of work
+          I've built these projects while learning new technologies,
           </p>
-          <p>The process of submitting an appilication was quite cosy</p>
+          <p>and I'm always eager to learn interesting new things. </p>
         </div>
 
 
@@ -36,12 +36,12 @@ const People = () => {
             {comments.map((comment, i) => {
               return (
                 <div className={`flexCenter ${css.comment}`}>
-                  <img src={comment.img} alt="" />
+                  {/* <img src={comment.img} alt="" /> */}
                   <p>{comment.comment}</p>
                   <div className={css.line}></div>
                   <div className={css.bio}>
                     <span>{comment.name}</span>
-                    <span>{comment.post}</span>
+                    {/* <span>{comment.post}</span> */}
                   </div>
                 </div>
               );
