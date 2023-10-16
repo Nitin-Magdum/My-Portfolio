@@ -91,4 +91,48 @@
             color: orange;
         }
     }
+    .button {
+        position: relative;
+        cursor: pointer;
+        border: none;
+        width: 150px;
+        height: 70px;
+        border-radius: 50px;
+        outline: none;
+        background: linear-gradient(90deg, #EC37D0, #D92B2B, #FFAA0D, #EC37D0);
+        background-size: 400%;
+        color: #fff;
+        font-size: 24px;
+        letter-spacing: 4px;
+      }
+      .button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: linear-gradient(90deg, #EC37D0, #D92B2B, #FFAA0D, #EC37D0);
+        background-size: 400%;
+        border-radius: 50px;
+        opacity: 0;
+        transition: .5s;
+      }
+      .button:hover {
+        animation: animate 10s linear infinite;
+      }
+      .button:hover::before {
+        filter: blur(25px);
+        opacity: .8;
+        animation: animate 10s linear infinite;
+      }
+      @keyframes animate {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 400%;
+        }
+      }
 }
