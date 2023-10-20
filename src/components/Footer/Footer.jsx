@@ -1,40 +1,36 @@
 import React from "react";
 import { footerVariants, staggerChildren } from "../../utils/motion";
 import css from "./Footer.module.scss";
-import { motion } from "framer-motion";
-import ContactForm from "./Contact";
+import {motion} from 'framer-motion'
 const Footer = () => {
   return (
     <motion.section
-      variants={staggerChildren}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className={`paddings ${css.wrapper}`}
-    >   <span className="primaryText">Connect Me</span>
+    variants={staggerChildren}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: false, amount: 0.25 }}
+    className={`paddings ${css.wrapper}`}>
+      
+      
       <motion.div
-        variants={footerVariants}
-        className={`innerWidth yPaddings flexCenter ${css.container}`}
-      >
-        
+      variants={footerVariants}
+      className={`innerWidth yPaddings flexCenter ${css.container}`}>
         <div className={css.left}>
-          <ContactForm />
+          <span className="primaryText">
+            Let's make something <br />
+            amazing together.
+          </span>
+          <span className="primaryText">
+            Start by <a href="mailto:nitinmagdum111@gmail.com">saying hi</a>
+          </span>
         </div>
 
         <div className={css.right}>
           <div className={css.info}>
-            {/* <span className="primaryText">Connect Me</span> */}
+            <a className="secondaryText" href="www.linkedin.com/in/dktenitinmagdum">LinkedIn</a>
+            <a className="secondaryText" href="https://www.instagram.com/nitinmagdum/">Instagram</a>
+            <a className="secondaryText" href="https://twitter.com/nitin__magdum">Twitter</a>
           </div>
-          <ul className={css.menu}>
-            <a href="https://www.linkedin.com/in/dktenitinmagdum/">
-              <li> LinkedIn</li>
-            </a>
-            <a href="https://github.com/Nitin-Magdum">
-              <li>GitHub</li>
-            </a>
-            {/* <li>Notes</li>
-            <li>Experience</li> */}
-          </ul>
         </div>
       </motion.div>
     </motion.section>

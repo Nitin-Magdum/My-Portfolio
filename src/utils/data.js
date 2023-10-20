@@ -1,6 +1,8 @@
 import { FaCode } from "react-icons/fa";
 import { IoMdAnalytics } from "react-icons/io";
 import { FaBrain } from "react-icons/fa";
+
+
 export const projectExperience = [
   {
     name: "Web Development",

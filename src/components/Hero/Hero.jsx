@@ -2,7 +2,17 @@ import React from "react";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import { motion } from "framer-motion";
+import pdfFile  from "../../Resume/NitinMagdum_Resume.docx.pdf"
 const Hero = () => {
+   const handleDownloadPdf = () => {
+    // Create an anchor element
+    const anchor = document.createElement("a");
+    anchor.href = pdfFile; // Set the href to the imported PDF file
+    anchor.download = "NitinMagdum_Resume.docx.pdf"; // Set the file name for download
+    anchor.click();
+  };
+
+
   return (
     <section className={`paddings ${css.wrapper}`}>
       <motion.div
@@ -47,7 +57,7 @@ const Hero = () => {
 
           <motion.div variants={fadeIn("left", "tween", 0.5, 1)} className={css.certificate}>
             {/* <img src="./certificate.png" alt="" /> */}
-            <button className={css.button}>Hire Me</button>
+            <button className={css.button}onClick={handleDownloadPdf}>Hire Me</button>
               <br/>
             {/* <span>CERTIFIED PROFATIONAL</span> */}
             {/* <span>UI/UX DESIGNER</span> */}
