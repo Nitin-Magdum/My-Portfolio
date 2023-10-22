@@ -3,7 +3,6 @@
 .wrapper {
     overflow: hidden;
 
-
     .container {
         position: relative;
         z-index: 1;
@@ -20,7 +19,6 @@
             flex-wrap: wrap;
         }
 
-
         .lowerElements {
             @media (max-width: $sm), (max-width: $md) {
                 margin-top: 4rem;
@@ -31,6 +29,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+
             .experience {
                 display: flex;
                 align-items: center;
@@ -62,15 +61,13 @@
                 justify-content: center;
                 background-position: bottom;
             }
-            
+
             position: absolute;
             bottom: -2rem;
             margin: auto;
-            // background-image: url("../splash.png");
             background-repeat: no-repeat;
             background-size: 20rem;
             left: 33%;
-            
 
             img {
                 @media (max-width: $sm ) {
@@ -91,6 +88,7 @@
             color: orange;
         }
     }
+
     .button {
         position: relative;
         cursor: pointer;
@@ -104,35 +102,42 @@
         color: #fff;
         font-size: 24px;
         letter-spacing: 4px;
-      }
-      .button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background: linear-gradient(90deg, #EC37D0, #D92B2B, #FFAA0D, #EC37D0);
-        background-size: 400%;
-        border-radius: 50px;
-        opacity: 0;
-        transition: .5s;
-      }
-      .button:hover {
-        animation: animate 10s linear infinite;
-      }
-      .button:hover::before {
-        filter: blur(25px);
-        opacity: .8;
-        animation: animate 10s linear infinite;
-      }
-      @keyframes animate {
-        0% {
-          background-position: 0%;
+        transition: background-position 0.5s; /* Smooth transition */
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background: linear-gradient(90deg, #EC37D0, #D92B2B, #FFAA0D, #EC37D0);
+            background-size: 400%;
+            border-radius: 50px;
+            opacity: 0;
+            transition: .5s;
         }
-        100% {
-          background-position: 400%;
+
+        &:hover {
+            background-position: 100%; /* Run the animation on hover */
+            animation: animate 10s linear infinite;
         }
-      }
+
+        &:hover::before {
+            filter: blur(25px);
+            opacity: .8;
+            animation: animate 10s linear infinite;
+        }
+    }
 }
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+

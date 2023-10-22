@@ -30,7 +30,7 @@ export const WhatDoIHelp = [
 
 export const workExp = [
   {
-    place: "IME Technologies",
+    place: "Ingenius Technologies",
     tenure: "May 2023 - Present",
     role: "Data Engineer",
     detail:
