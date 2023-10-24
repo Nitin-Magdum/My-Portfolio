@@ -28,6 +28,7 @@ const Footer = () => {
         <div className={css.right}>
           <div className={css.info}>
             <a className="secondaryText" href="https://www.linkedin.com/in/dktenitinmagdum" target="_blank">LinkedIn</a>
+            <a className="secondaryText" href="https://github.com/Nitin-Magdum" target="_blank">GitHub</a>
             <a className="secondaryText" href="https://www.instagram.com/nitinmagdum/" target="_blank">Instagram</a>
             <a className="secondaryText" href="https://twitter.com/nitin__magdum" target="_blank">Twitter</a>
           </div>
