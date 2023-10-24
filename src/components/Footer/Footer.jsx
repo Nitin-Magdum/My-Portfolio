@@ -21,15 +21,15 @@ const Footer = () => {
             amazing together.
           </span>
           <span className="primaryText">
-            Start by <a href="mailto:nitinmagdum111@gmail.com">saying hi</a>
+            Start by <a href="mailto:nitinmagdum111@gmail.com" >saying hi</a>
           </span>
         </div>
 
         <div className={css.right}>
           <div className={css.info}>
-            <a className="secondaryText" href="www.linkedin.com/in/dktenitinmagdum">LinkedIn</a>
-            <a className="secondaryText" href="https://www.instagram.com/nitinmagdum/">Instagram</a>
-            <a className="secondaryText" href="https://twitter.com/nitin__magdum">Twitter</a>
+            <a className="secondaryText" href="https://www.linkedin.com/in/dktenitinmagdum" target="_blank">LinkedIn</a>
+            <a className="secondaryText" href="https://www.instagram.com/nitinmagdum/" target="_blank">Instagram</a>
+            <a className="secondaryText" href="https://twitter.com/nitin__magdum" target="_blank">Twitter</a>
           </div>
         </div>
       </motion.div>
