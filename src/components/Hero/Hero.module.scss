@@ -25,7 +25,7 @@
                 gap: 2rem;
                 justify-content: center;
             }
-            margin-top: 12rem;
+            margin-top: 20rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -55,7 +55,7 @@
             @media (max-width: $sm ), (max-width: $md) {
                 position: relative;
                 left: 0;
-                background-size: 20rem;
+                background-size: 40rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -63,17 +63,17 @@
             }
 
             position: absolute;
-            bottom: -2rem;
+            bottom: -3rem;
             margin: auto;
             background-repeat: no-repeat;
-            background-size: 20rem;
-            left: 33%;
+            background-size: 40rem;
+            left: 25%;
 
             img {
                 @media (max-width: $sm ) {
-                    width: 23rem;
+                    width: 33rem;
                 }
-                margin-bottom: -5px;
+                margin-bottom: 5px;
             }
         }
 
