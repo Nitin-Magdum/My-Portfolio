@@ -3,6 +3,8 @@ import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import { motion } from "framer-motion";
 import pdfFile  from "../../Resume/NitinMagdum_Resume.docx.pdf"
+
+
 const Hero = () => {
    const handleDownloadPdf = () => {
     // Create an anchor element
@@ -22,6 +24,7 @@ const Hero = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth ${css.container}`}
       >
+   
         <div className={css.upperElements}>
           <motion.span className="primaryText" variants={fadeIn("right", "tween", 0.2, 1)}>
             Hey There,
@@ -42,9 +45,9 @@ const Hero = () => {
           <motion.img variants={slideIn("up", "tween", 0.5, 1.3)} src="./Face.png" alt="" />
         </motion.div>
 
-        <a className={css.email} href="mailto:zainkeepscode@gmail.com">
+        {/* <a className={css.email} href="mailto:nitinmagdum111@gmail.com">
           nitinmagdum111@gmail.com
-        </a>
+        </a> */}
 
         <div className={css.lowerElements}>
           <motion.div variants={fadeIn("right", "tween", 0.3, 1)} className={css.experience}>
