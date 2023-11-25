@@ -33,7 +33,7 @@ const Hero = () => {
             <ReactTyped strings={["I'm Nitin","Data Engineer","Web Developer","Learner","Tech Enthusiast"]} typeSpeed={200} loop backSpeed={300} cursorChar='_' showCursor={true}/>
           </motion.span>
           <motion.span className="secondaryText"variants={fadeIn("left", "tween", 0.9, 1)}>
-          Passionate about Machine Learning and React.js
+          Passionate about Artificial Intelligence,Quantum Computing and Web Dev
             <br />
                  for their potential in my professional growth
           </motion.span>
