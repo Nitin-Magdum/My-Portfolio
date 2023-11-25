@@ -36,7 +36,7 @@ const Header = () => {
           <li><a href="#experties">Skills</a></li>
           <li><a href="#work">Experience</a></li>
           <li><a href="#portfolio">Technologies</a></li>
-          <li><a href="#mywork">My Work</a></li>
+          {/* <li><a href="#mywork">My Work</a></li> */}
           <li><a href="#footer">Contact me</a></li>
           <li className={`flexCenter ${css.phone}`}>
           </li>
