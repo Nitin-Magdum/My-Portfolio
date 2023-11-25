@@ -3,7 +3,7 @@ import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import { motion } from "framer-motion";
 import pdfFile  from "../../Resume/NitinMagdum_Resume.docx.pdf"
-
+import ReactTyped from "react-typed";
 
 const Hero = () => {
    const handleDownloadPdf = () => {
@@ -26,10 +26,11 @@ const Hero = () => {
       >
    
         <div className={css.upperElements}>
-          <motion.span className="primaryText" variants={fadeIn("right", "tween", 0.2, 1)}>
+          <motion.span className="primaryText" variants={fadeIn("right", "tween", 0.1, 1)}>
             Hey There,
             <br />
-            I'm Nitin.
+            
+            <ReactTyped strings={["I'm Nitin","Data Engineer","Web Developer","Learner","Tech Enthusiast"]} typeSpeed={200} loop backSpeed={300} cursorChar='_' showCursor={true}/>
           </motion.span>
           <motion.span className="secondaryText"variants={fadeIn("left", "tween", 0.9, 1)}>
           Passionate about Machine Learning and React.js

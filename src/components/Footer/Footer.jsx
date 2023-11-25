@@ -17,8 +17,8 @@ const Footer = () => {
       className={`innerWidth yPaddings flexCenter ${css.container}`}>
         <div className={css.left}>
           <span className="primaryText">
-            Let's make something <br />
-            amazing together.
+            Let's Connect  <br />
+            {/* <input></input> */}
           </span>
           <span className="primaryText">
             Start by <a href="mailto:nitinmagdum111@gmail.com" >saying hi</a>
