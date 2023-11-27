@@ -30,10 +30,10 @@ const Hero = () => {
             Hey There,
             <br />
             
-            <ReactTyped strings={["I'm Nitin","Data Engineer","Web Developer","Learner","Tech Enthusiast"]} typeSpeed={500} loop backSpeed={500} cursorChar='_' showCursor={true}/>
+            <ReactTyped strings={["I'm Nitin","Data Engineer","Web Developer","Learner","Tech Enthusiast"]} typeSpeed={100} loop backSpeed={100} cursorChar='_' showCursor={true}/>
           </motion.span>
           <motion.span className="secondaryText"variants={fadeIn("left", "tween", 0.9, 1)}>
-          Passionate about Artificial Intelligence,Quantum Computing and Web Dev
+          Passionate about Artificial Intelligence, Quantum Computing and Web Dev
             <br />
                  for their potential in my professional growth
           </motion.span>
