@@ -1,9 +1,11 @@
 @import '../../styles/contants.scss';
 
 .wrapper {
+    background-color: #ffffff;
     .container {
         flex-direction: column;
         gap: 2rem;
+      
 
         .experiences {
             width: 100%;
