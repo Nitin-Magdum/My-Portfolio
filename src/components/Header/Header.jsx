@@ -37,7 +37,7 @@ const Header = () => {
           <li><a href="#work">Experience</a></li>
           <li><a href="#portfolio">Technologies</a></li>
           {/* <li><a href="#mywork">My Work</a></li> */}
-          <li><a href="#footer">Contact me</a></li>
+          <li><a href="#Footer">Contact me</a></li>
           <li className={`flexCenter ${css.phone}`}>
           </li>
         </ul>
@@ -55,3 +55,4 @@ const Header = () => {
 };
 
 export default Header;
+
