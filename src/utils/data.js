@@ -2,6 +2,22 @@ import { FaCode } from "react-icons/fa";
 import { IoMdAnalytics } from "react-icons/io";
 import { FaBrain } from "react-icons/fa";
 
+// Function to calculate the month count for a given tenure
+const calculateMonthsCount = (tenure) => {
+  const [start, end] = tenure.split(' - ');
+  const startDate = new Date(start);
+  const endDate = end.toLowerCase() === 'present' ? new Date() : new Date(end);
+  
+  const monthsCount = (endDate.getFullYear() - startDate.getFullYear()) * 12 + endDate.getMonth() - startDate.getMonth();
+  return monthsCount;
+};
+
+// Function to format monthsCount into years and months
+const formatMonthsCount = (monthsCount) => {
+  const years = Math.floor(monthsCount / 12);
+  const months = monthsCount % 12;
+  return years > 0 ? `${years} ${years === 1 ? 'year' : 'years'}${months > 0 ? ` ${months} ${months === 1 ? 'month' : 'months'}` : ''}` : `${months} ${months === 1 ? 'month' : 'months'}`;
+};
 
 export const projectExperience = [
   {
@@ -13,7 +29,7 @@ export const projectExperience = [
   {
     name: "Data Engineering & Analytics",
     projects: "Python, Pandas, PySpark, Databricks, SQL, Machine Learning, Deep Learning",
-    icon: IoMdAnalytics  ,
+    icon: IoMdAnalytics,
     bg: "#EEC048",
   },
   {
@@ -25,7 +41,7 @@ export const projectExperience = [
 ];
 
 export const WhatDoIHelp = [
-  "Experience in React development, I possess a strong understanding of web development principles and React library. I excel in crafting clean, maintainable code and designing elegant, user-friendly interfaces. Additionally, I leverage my expertise in Apache Databricks and PySpark to effectively manage and transform data, enabling data science and visualization teams to derive valuable insights for strategic decision-making. ",
+  "Experience in React development, I possess a strong understanding of web development principles and React library. I excel in crafting clean, maintainable code and designing elegant, user-friendly interfaces. Additionally, I leverage my expertise in Apache Databricks and PySpark to effectively manage and transform data, enabling data science and visualization teams to derive valuable insights for strategic decision-making.",
 ];
 
 export const workExp = [
@@ -45,71 +61,15 @@ export const workExp = [
   },
 ];
 
-export const comments = [
-  {
-    name: "Anamika 1",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
-  },
-  {
-    name: "Anamika 2",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people1.png",
-  },
-  {
-    name: "Anamika 3",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
-  },
-  {
-    name: "Anamika 4",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people1.png",
-  },
-  {
-    name: "Anamika 5",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
-  },
-  {
-    name: "Anamika 6",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people1.png",
-  },
-  {
-    name: "Anamika 7",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
-  },
-  {
-    name: "Anamika 8",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people1.png",
-  },
-  {
-    name: "Anamika 9",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
-  },
-];
+const workExpWithMonthsCount = workExp.map((exp) => {
+  return {
+    ...exp,
+    monthsCount: calculateMonthsCount(exp.tenure),
+  };
+});
+
+workExp.length = 0;
+workExp.push(...workExpWithMonthsCount);
 
 export const sliderSettings = {
   dots: true,
@@ -148,3 +108,6 @@ export const sliderSettings = {
     },
   ],
 };
+
+// Example usage of formatted tenure
+console.log(formatMonthsCount(workExp[0].monthsCount)); // Output: "1 year 6 months"
